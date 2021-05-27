@@ -1,0 +1,51 @@
+﻿@model IEnumerable<KLFGroup.ViewModel.ReportUserActivityViewmodel>
+
+@{
+    ViewData["Title"] = "ReportUserActivity";
+}
+
+<h1>Report User Activity</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActivityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOccurrence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastOccurrence)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActivityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstOccurrence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastOccurrence)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
